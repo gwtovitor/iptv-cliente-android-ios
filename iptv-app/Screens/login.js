@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
   },
   textologin:{
     fontSize: 20,
-    color: 'yellow',
+    color: 'red',
     fontSize: 30,
     paddingBottom: 20,
     fontWeight: 'bold',

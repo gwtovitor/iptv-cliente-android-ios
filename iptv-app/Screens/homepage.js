@@ -1,7 +1,7 @@
 import React, { Component, useState } from 'react';
 import { StyleSheet, Text, View, Dimensions, StatusBar } from 'react-native';
 import { Video, AVPlaybackStatus } from 'expo-av';
-
+import Video from 'react-native-video';
 import * as ScreenOrientation from 'expo-screen-orientation';
 
 async function changeScreenOrientation() {
@@ -29,16 +29,10 @@ class Videoapp extends Component{
       return(
           <View style={styles.container}>
            
-            <StatusBar hidden={true}/>
-            <Video
-            source={{ uri: 'https://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4' }}
-            rate={1.0}
-            volume={1.0}
-            loadAsync
-            shouldPlay
-            resizeMode='contain'
-            useNativeControls
-            style={{ flex: 1,}}/>
+           <Video source={{uri: "http://hdmais.com:80/d623481/76268116/6283"}}  
+
+            style={styles.backgroundVideo} />
+         
           </View>
       );
     }
@@ -48,6 +42,13 @@ class Videoapp extends Component{
     container:{
         flex: 1,
         backgroundColor: '#fff'
+    },
+    backgroundVideo: {
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      bottom: 0,
+      right: 0,
     },
   });
   export default Videoapp
